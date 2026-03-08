@@ -6,7 +6,7 @@
 <title>AuraFem — Women's Day 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300;1,9..144,400&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ─────────────────── RESET & TOKENS ─────────────────── */
+
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
@@ -38,7 +38,7 @@ body {
   cursor: none;
 }
 
-/* ─── CUSTOM CURSOR ─── */
+
 #cur {
   position: fixed; pointer-events: none; z-index: 99999;
   width: 36px; height: 36px;
@@ -53,7 +53,6 @@ body {
   background:var(--mauve); border-radius:50%;
 }
 
-/* ─────────────────── INTRO ─────────────────── */
 #intro {
   position:fixed; inset:0; z-index:200;
   background:var(--cream);
@@ -96,10 +95,8 @@ body {
 }
 .btn-enter:hover { background:var(--blush); border-color:var(--mauve); letter-spacing:0.45em; }
 
-/* ─────────────────── SITE WRAPPER ─────────────────── */
 #site { display:none; opacity:0; transition:opacity 0.8s; color: #d488a3; }
 
-/* ─────────────────── NAV ─────────────────── */
 nav {
   position:fixed; top:0; left:0; right:0; z-index:100;
   background:var(--cream);
@@ -145,7 +142,6 @@ nav {
 }
 .nav-cta:hover { background:var(--rose); }
 
-/* ─────────────────── HERO ─────────────────── */
 #hero {
   min-height:100vh; padding:128px 56px 100px;
   display:grid; grid-template-columns:1.15fr 1fr;
@@ -153,7 +149,6 @@ nav {
   position:relative;
 }
 
-/* Decorative background blob */
 #hero::before {
   content:''; position:absolute;
   top:80px; right:0; width:48%; height:80%;
@@ -203,7 +198,6 @@ nav {
 
 .hero-rule { grid-column:1/-1; height:1px; background:rgba(196,139,159,0.2); margin-top:60px; }
 
-/* ─────────────────── TICKER ─────────────────── */
 .ticker {
   background:var(--blush); overflow:hidden; padding:15px 0;
   border-bottom:1px solid rgba(196,139,159,0.15);
@@ -216,7 +210,6 @@ nav {
 .t-item::after { content:' ·'; font-style:normal; color:var(--rose); margin-left:10px; }
 @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-/* ─────────────────── SECTION COMMONS ─────────────────── */
 .sec-wrap { padding:120px 56px; }
 .sec-label {
   font-size:10px; letter-spacing:0.55em; text-transform:uppercase;
@@ -233,7 +226,6 @@ nav {
 }
 .sec-head em { font-style:italic; color:var(--mauve); }
 
-/* ─────────────────── ACHIEVEMENT GRID ─────────────────── */
 .ach-grid {
   display:grid;
   grid-template-columns:repeat(12, 1fr);
@@ -298,7 +290,6 @@ nav {
 }
 .cbtn:hover { background:white; letter-spacing:0.28em; }
 
-/* ─────────────────── CLUB SECTION ─────────────────── */
 #club { padding:120px 56px; background:var(--warm); }
 
 .club-intro {
@@ -323,7 +314,6 @@ nav {
   align-self:flex-end;
 }
 
-/* 5-person grid */
 .club-grid {
   display:grid;
   grid-template-columns:repeat(5,1fr);
@@ -342,13 +332,13 @@ nav {
 
 .member-photo {
   width:100%;
-  height: 320px;          /* fixed pixel height — all cards identical */
+  height: 320px;          
   position:relative; overflow:hidden;
   background:linear-gradient(145deg, var(--blush), var(--lilac));
   display:flex; align-items:center; justify-content:center;
   flex-shrink: 0;
 }
-/* ─── HERO CLUB LOGO ─── */
+
 .hero-club-logo {
   display: flex; align-items: center; gap: 12px;
   margin-bottom: 32px;
@@ -372,17 +362,16 @@ nav {
   color: var(--mauve); font-weight: 500;
 }
 
-/* ─── MEMBER PHOTO WITH IMAGE SUPPORT ─── */
+
 .member-photo img.member-real-photo {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 15%; /* bias toward face/top */
+  object-position: center 15%; 
   display: block;
 }
 .member-photo canvas { width:100%; height:100%; display:block; position:absolute; inset:0; }
 
-/* ─── HOW TO USE comment placeholder ─── */
 
 .member-photo-overlay {
   position:absolute; inset:0;
@@ -408,14 +397,14 @@ nav {
 }
 .member-desc { font-size:13px; line-height:1.7; color:var(--muted); }
 
-/* Accent colors per card */
+
 .member-card:nth-child(1) .member-photo { background:linear-gradient(145deg,#f5d6d6,#e8c4d0); }
 .member-card:nth-child(2) .member-photo { background:linear-gradient(145deg,#d4c4e0,#c8d8f0); }
 .member-card:nth-child(3) .member-photo { background:linear-gradient(145deg,#c8e0d8,#d0e4d8); }
 .member-card:nth-child(4) .member-photo { background:linear-gradient(145deg,#f0dcc8,#f5d6d6); }
 .member-card:nth-child(5) .member-photo { background:linear-gradient(145deg,#c2d8e8,#d4c4e0); }
 
-/* ─────────────────── QUOTES ─────────────────── */
+
 #quotes {
   padding:110px 56px;
   background:var(--blush);
@@ -447,7 +436,7 @@ nav {
 }
 .q-dot.on { opacity:1; transform:scale(1.4); }
 
-/* ─────────────────── CLOSING ─────────────────── */
+
 #closing {
   padding:140px 56px 120px;
   display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
@@ -469,7 +458,7 @@ nav {
 }
 .btn-soft:hover { background:var(--rose); transform:translateX(6px); }
 
-/* ─────────────────── FOOTER ─────────────────── */
+
 footer {
   background:var(--ink);
   padding:64px 56px 48px;
@@ -531,7 +520,7 @@ footer {
 }
 @keyframes hb { 0%,100%{transform:scale(1)} 50%{transform:scale(1.25)} }
 
-/* ─────────────────── MODAL ─────────────────── */
+
 .modal-wrap {
   position:fixed; inset:0; z-index:500;
   display:flex; align-items:center; justify-content:center; padding:40px;
@@ -570,11 +559,10 @@ footer {
 #m-body2{ font-size:16px; line-height:1.85; color:var(--muted); }
 #m-pill { display:inline-block; background:var(--blush); padding:6px 18px; border-radius:100px; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--mauve); margin-top:24px; }
 
-/* ─────────────────── REVEAL ─────────────────── */
 .rv { opacity:0; transform:translateY(26px); transition:opacity 0.85s ease, transform 0.85s ease; }
 .rv.in { opacity:1; transform:translateY(0); }
 
-/* ─────────────────── RESPONSIVE ─────────────────── */
+
 @media(max-width:1100px){
   .club-grid { grid-template-columns:repeat(3,1fr); }
   .club-grid .member-card:nth-child(4),
@@ -605,10 +593,10 @@ footer {
 </head>
 <body>
 
-<!-- CURSOR -->
+
 <div id="cur"></div>
 
-<!-- ═══════════════ INTRO ═══════════════ -->
+
 <div id="intro">
   <p class="intro-label"><b>AuraFem · Innovators Quest · Women's Day 2026</b></p>
   <h1 class="intro-title">She<br><em>rewrote</em><br>the rules.</h1>
@@ -616,10 +604,9 @@ footer {
   <button class="btn-enter" onclick="enter()">Enter the Experience</button>
 </div>
 
-<!-- ═══════════════ SITE ═══════════════ -->
+
 <div id="site">
 
-  <!-- NAV -->
   <nav>
     <div class="nav-brand">
       <span class="nav-club">Innovators Quest</span>
@@ -635,10 +622,10 @@ footer {
     </ul>
   </nav>
 
-  <!-- ─── HERO ─── -->
+  
   <section id="hero">
     <div class="rv">
-      <!-- Club logo — replace src with your Cloudinary URL -->
+      
       <div class="hero-club-logo">
         <img id="club-logo-img" src="" alt="Innovators Quest" onerror="this.parentElement.style.display='none'">
         <div class="hero-club-logo-fallback" id="logo-fallback">
@@ -672,7 +659,7 @@ footer {
     <div class="hero-rule"></div>
   </section>
 
-  <!-- ─── CLUB SECTION ─── -->
+
   <section id="club">
     <div class="club-intro rv">
         
@@ -752,7 +739,7 @@ footer {
     </div>
   </section>
 
-  <!-- TICKER -->
+  
   <div class="ticker">
     <div class="ticker-track">
       <span class="t-item">Kalpana Chawla · Space</span>
@@ -778,7 +765,7 @@ footer {
     </div>
   </div>
 
-  <!-- ─── ACHIEVEMENTS ─── -->
+  
   <section class="sec-wrap" id="achievements">
     <div class="rv">
       <p class="sec-label">Breaking Every Barrier</p>
@@ -844,14 +831,14 @@ footer {
 
   
 
-  <!-- ─── QUOTES ─── -->
+  
   <section id="quotes">
     <div class="q-text rv" id="qt"></div>
     <p class="q-attr rv" id="qa"></p>
     <div class="q-nav rv" id="qdots"></div>
   </section>
 
-  <!-- ─── CLOSING ─── -->
+ 
   <section id="closing">
     <div class="rv">
       <h3 class="close-h">To every<br>woman —<br><em>thank you.</em></h3>
@@ -859,11 +846,11 @@ footer {
     <div class="close-right rv">
       <p class="close-p">She was told the room wasn't built for her. So she built a new one and left the door wide open for everyone who came after.</p>
       <p class="close-p">Happy International Women's Day, 2026. From all of us at Innovators Quest.</p>
-      <button class="btn-soft" onclick="openModal('celebrate')">Celebrate Her ✦</button>
+      <button class="btn-soft" onclick="openModal('celebrate')">Celebrate Her ❤︎</button>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
+  
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
@@ -901,9 +888,8 @@ footer {
     </div>
   </footer>
 
-</div><!-- /site -->
+</div>
 
-<!-- ═══════════════ MODAL ═══════════════ -->
 <div class="modal-wrap" id="modal">
   <div class="modal-bg" onclick="closeModal()"></div>
   <div class="modal-box">
@@ -920,52 +906,39 @@ footer {
 </div>
 
 <script>
-/* ═══════════════════════════════════════════════════
-   ✦  EASY CONFIG — PASTE YOUR CLOUDINARY LINKS HERE ✦
-   ═══════════════════════════════════════════════════
 
-   HOW TO GET A CLOUDINARY LINK:
-   1. Upload image to cloudinary.com
-   2. Click the image → click "Copy URL"
-   3. Paste it below between the quotes
-
-   For LOGO:  paste the full URL for your club logo
-   For PHOTOS: paste each member's photo URL
-   Leave as "" to keep the soft gradient placeholder.
-═══════════════════════════════════════════════════ */
 
 const CONFIG = {
 
-  // Club logo URL (shown in hero + navbar)
-  // Example: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1772918357/IQuestLogo_c37bfl_qyvmph.png"
+ 
     clubLogo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1772919051/IQuestLogo_c37bfl.png",
 
-  // Member photos — paste Cloudinary URLs here
+ 
   members: [
     {
-      name:  "Swagata Banerjee",          // ← replace with real name
-      photo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1772961172/d8bcbfe6-f4f8-47b7-99c9-1dae1ff2e3d3_1_l22lef.png",                  // ← paste Cloudinary URL
-    },
+      name:  "Swagata Banerjee",         
+      photo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1772961172/d8bcbfe6-f4f8-47b7-99c9-1dae1ff2e3d3_1_l22lef.png",
+    },            
     {
-      name:  "Ardhra MP",
+      name:  "Ardhra M P",
       photo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1772916448/CopyQ.NLkuQq_1_qw2zde.png",
     },
     {
-      name:  "Himangi Goel",
+      name:  "Himangi Goyal",
       photo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1768998788/himangi_qe0kyz.png",
     },
     {
-      name:  "Shreya Sarvanan",
+      name:  "Shreya Saravanan",
       photo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1768998909/shreya_1_hy41iw.png",
     },
     {
-      name:  "Hadeeqa kausour",
+      name:  "Hadeeqa kouser M",
       photo: "https://res.cloudinary.com/dhrdgajxa/image/upload/v1769017283/WhatsApp_Image_2026-01-21_at_6.53.11_PM_pyvyxo.png",
     },
   ],
 };
 
-/* ─── INJECT CLUB LOGO ─── */
+
 function injectLogo() {
   const img = document.getElementById('club-logo-img');
   const fallback = document.getElementById('logo-fallback');
@@ -973,7 +946,7 @@ function injectLogo() {
     img.src = CONFIG.clubLogo;
     img.style.display = 'block';
     fallback.style.display = 'none';
-    // Also update navbar dot to show logo
+
     const navDot = document.querySelector('.nav-dot');
     if (navDot) {
       navDot.style.width = '92px';
@@ -988,17 +961,17 @@ function injectLogo() {
   }
 }
 
-/* ─── INJECT MEMBER NAMES & PHOTOS ─── */
+
 function injectMembers() {
   const cards = document.querySelectorAll('.member-card');
   cards.forEach((card, i) => {
     const m = CONFIG.members[i];
     if (!m) return;
 
-    // Update name
+   
     const nameEl = card.querySelector('.member-name');
     if (nameEl && m.name && m.name !== "Her Name") {
-      // Split name into first + last for italic styling
+   
       const parts = m.name.trim().split(' ');
       if (parts.length > 1) {
         nameEl.innerHTML = `<em>${parts[0]}</em> ${parts.slice(1).join(' ')}`;
@@ -1007,19 +980,19 @@ function injectMembers() {
       }
     }
 
-    // Inject photo
+   
     const photoWrap = card.querySelector('.member-photo');
     if (photoWrap && m.photo) {
-      // Remove placeholder canvas if present
+      
       const canvas = photoWrap.querySelector('canvas');
       if (canvas) canvas.remove();
 
-      // Add real photo
+    
       const img = document.createElement('img');
       img.src = m.photo;
       img.className = 'member-real-photo';
       img.alt = m.name;
-      // Insert before overlay
+     
       photoWrap.insertBefore(img, photoWrap.firstChild);
     }
   });
@@ -1031,7 +1004,7 @@ let mx=0,my=0,cx=0,cy=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
 (function loop(){cx+=(mx-cx)*0.13;cy+=(my-cy)*0.13;cur.style.left=cx-18+'px';cur.style.top=cy-18+'px';requestAnimationFrame(loop);})();
 
-/* ─── ENTER ─── */
+
 function enter(){
   const intro=document.getElementById('intro');
   intro.classList.add('out');
@@ -1043,7 +1016,7 @@ function enter(){
   },900);
 }
 
-/* ─── REVEAL ─── */
+
 function initReveal(){
   const io=new IntersectionObserver(entries=>{
     entries.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('in'),i*80); });
@@ -1051,7 +1024,7 @@ function initReveal(){
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 }
 
-/* ─── AVATAR PLACEHOLDERS ─── */
+
 const avatarColors=[
   ['#f5d6d6','#c48b9f'],
   ['#d4c4e0','#9b7fc0'],
@@ -1067,17 +1040,17 @@ function drawAvatar(id, idx){
   c.width=w; c.height=h;
   const ctx=c.getContext('2d');
   const [bg,fg]=avatarColors[idx];
-  // soft gradient bg
+
   const gr=ctx.createLinearGradient(0,0,w,h);
   gr.addColorStop(0,bg); gr.addColorStop(1,adjustColor(bg,0.7));
   ctx.fillStyle=gr; ctx.fillRect(0,0,w,h);
-  // silhouette circle (head)
+ 
   ctx.fillStyle=fg+'55';
   ctx.beginPath(); ctx.arc(w/2,h*0.38,w*0.22,0,Math.PI*2); ctx.fill();
-  // silhouette body
+ 
   ctx.fillStyle=fg+'33';
   ctx.beginPath(); ctx.ellipse(w/2,h*0.85,w*0.32,h*0.28,0,0,Math.PI*2); ctx.fill();
-  // decorative dots
+  
   ctx.fillStyle=fg+'44';
   for(let i=0;i<6;i++){
     const x=Math.random()*w,y=Math.random()*h*0.5;
@@ -1090,7 +1063,7 @@ function adjustColor(hex,f){
   return`rgb(${Math.round(r*f)},${Math.round(g*f)},${Math.round(b*f)})`;
 }
 
-/* ─── QUOTES ─── */
+
 const qs=[
   {q:"Well-behaved women seldom make history.",a:"Laurel Thatcher Ulrich"},
   {q:"A woman with a voice is, by definition, a strong woman.",a:"Melinda Gates"},
@@ -1124,7 +1097,7 @@ function setQ(i){
   },280);
 }
 
-/* ─── MODAL DATA ─── */
+
 const MD={
   kalpana:{tag:'India · Space · 1997',title:'Kalpana Chawla',year:'First Indian woman in space',
     body:'Born in Karnal, Haryana, Kalpana Chawla became the first woman of Indian origin in space aboard the Space Shuttle Columbia in 1997. She logged over 376 hours in space before a second mission in 2003.',
@@ -1199,7 +1172,7 @@ function closeModal(){
 }
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 
-/* Draw avatars after fonts/layout settle */
+
 setTimeout(()=>{
   for(let i=0;i<5;i++) drawAvatar('ph'+i,i);
 },600);
